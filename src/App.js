@@ -1,34 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-//utenfor 'react' så her er det ren JS
-// denne isLoading er ikke ekte, men virker
 function isAuthed() {
   return true;
 }
 
-function App() {
-const authed = isAuthed()
-// får hele function App til å returnere null om er sann
-// som gjør at ingenting i funksjonen App vises
-if(isAuthed() === true) {
-  return null
+function isNew() {
+  return false;
 }
+function App() {
+  const authed = isAuthed();
+  const firstLogih = isNew();
 
-  return (
-    <div className="App">
-      <header className="App-header">
-       
-          
-          <h1>Hei verden, jeg er skrevet av {name}</h1>
-          <p>Idag er det {new Date().toLocaleDateString()}</p>
-          <p> 2 ganger to er {2*2}</p>
-        
-   
-      </header>
-    </div>
-  );
+
+  if (firstLogih === true) {
+    return (
+      <div className="App">
+        <h1>Welcome to our platform first time user</h1>
+      </div>
+    );  }
+  if (authed === true) {
+    return (
+      <div className="App">
+        <h1>Hello Logged inn user</h1>
+      </div>
+    );
+  } else {
+    return (
+      <div className="App">
+        <h1>Login to see your dashboard</h1>
+      </div>
+    );
+  }
 }
 
 export default App;
