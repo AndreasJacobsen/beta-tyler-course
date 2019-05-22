@@ -4,15 +4,15 @@ import './App.css';
 
 //utenfor 'react' så her er det ren JS
 // denne isLoading er ikke ekte, men virker
-function isLoading() {
-  return false;
+function isAuthed() {
+  return true;
 }
 
 function App() {
-const name = 'Andreas'
+const authed = isAuthed()
 // får hele function App til å returnere null om er sann
 // som gjør at ingenting i funksjonen App vises
-if(isLoading() === true) {
+if(isAuthed() === true) {
   return null
 }
 
