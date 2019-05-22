@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 function isAuthed() {
   return true;
@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <h1>
+        {/*Turnary operator*/}
         {authed === true ? <h1>Welcome back!</h1> : <h1>Please log inn</h1>}
       </h1>
     </div>
