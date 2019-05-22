@@ -5,7 +5,7 @@ function showWarning() {
   return true;
 }
 function isAuthed() {
-  return false;
+  return true;
 }
 
 function HelloLogin() {
@@ -15,7 +15,11 @@ function HelloLogin() {
   return (
     <div className="App">
       {/*Turnary operator*/}
-      {authed === true ? <h1>Welcome back!</h1> : <h1>Please log inn</h1>}
+      {authed === true ? (
+        <h1>Welcome back, today is {new Date().toLocaleDateString()}</h1>
+      ) : (
+        <h1>Please log inn</h1>
+      )}
       {warning === true ? (
         <h1>Warning er sann!</h1>
       ) : null /* returner null så komponent bare viser noe om conditonen er rett*/}
