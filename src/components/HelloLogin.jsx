@@ -16,7 +16,7 @@ function HelloLogin() {
     <div className="App">
       {/*Turnary operator*/}
       {authed === true ? (
-        <h1>Welcome back, today is {new Date().toLocaleDateString()}</h1>
+        <h1>Welcome back, today is {new Date().toLocaleDateString()} </h1>
       ) : (
         <h1>Please log inn</h1>
       )}
