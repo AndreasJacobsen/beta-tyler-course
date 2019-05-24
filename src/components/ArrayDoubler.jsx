@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 
 function doubler(x) {
   const results = x * 2;
