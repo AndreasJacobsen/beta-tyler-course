@@ -4,6 +4,9 @@ import './App.css';
 import './components/HelloLogin';
 import HelloLogin from './components/HelloLogin';
 import Name from './components/Props';
+import ArrayDoubler from './components/ArrayDoubler';
+//stolen from https://stackoverflow.com/questions/43948828/how-to-pass-an-array-of-items-in-react-js
+const myItems = [1, 2, 3, 4, 5, 6, 7];
 
 function App() {
   return (
@@ -16,7 +19,11 @@ function App() {
       <h1>
         <i>Introduction to props</i>
       </h1>
+
       <Name fName="Andreas" lName="Jacobsen" />
+      <hr />
+      <i>Arraydoubler</i>
+      <ArrayDoubler items={myItems} />
     </div>
   );
 }
